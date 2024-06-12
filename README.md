@@ -4,7 +4,7 @@
 
 ## Installation
 
-```
+```sh
 pip install pd
 pip install yfinance
 ```
