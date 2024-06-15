@@ -1,3 +1,5 @@
+from utils.beep_sound import beep_sound
+
 def buy_sell_stocks(data, ticker, qty):
     """
     Simulates buying and selling stocks based on buy/sell signals in the 'Signal' column.
@@ -15,7 +17,7 @@ def buy_sell_stocks(data, ticker, qty):
     for index, row in data.iterrows():
         signal = row["Signal"]
         close_price = row["Close"]
-        if total_profit > 1000.0:
+        if total_profit > 10000.0:
             break
 
         if signal == 1 and current_holding == 0:  # Buy signal and no current holding
@@ -44,7 +46,6 @@ def buy_sell_stocks(data, ticker, qty):
             trade["Profit"] = profit
             trades.append(trade)
             current_holding = 0
-
         else:  # No action (hold or no signal)
             pass  # No change in holdings or prices
 
