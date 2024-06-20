@@ -11,5 +11,6 @@ def fetch_and_compute_indicators(ticker, interval, period):
 
     stock_data["MACD"] = stock_data["EMA12"] - stock_data["EMA26"]
     stock_data["Signal_Line"] = stock_data["MACD"].ewm(span=9, adjust=False).mean()
-
+    stock_data["macd_histogram"] = stock_data["MACD"] - stock_data["Signal_Line"]
+    
     return stock_data

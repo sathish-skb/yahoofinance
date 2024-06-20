@@ -15,3 +15,5 @@ pip install yfinance
 ```sh
 > python3 app.py
 ```
+
+![alt text](archive/image.png)
